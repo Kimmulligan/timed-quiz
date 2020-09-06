@@ -35,3 +35,6 @@ header {
 .answer:hover {
   background-color:  #a705c7;
 }
+#score-page {
+  display: none;
+}
