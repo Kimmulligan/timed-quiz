@@ -4,19 +4,19 @@ var score = 0;
 var question_area = document.querySelector(".question_area");
 var questions = [
   {
-    title: "What is a variable?",
-    choices: ["answer1", "answer2", "answer3", "answer4"],
-    answer: "answer2",
+    title: "Who is NOT an enemy of The Doctor?",
+    choices: ["Daleks", "The Borg", "Cybermen", "Weeping Angels"],
+    answer: "The Borg",
   },
   {
-    title: "What is an array?",
-    choices: ["answer1", "answer2", "answer3", "answer4"],
-    answer: "answer2",
+    title: "What does TARDIS stand for?",
+    choices: ["Top And Rear Distance In Smoke", "Toward Angles Relative Due In Soup", "Time And Relative Dimension In Space", "Time Assets Risky Doors In Space"],
+    answer: "Time And Relative Dimension In Space"
   },
   {
-    title: "What is an object?",
-    choices: ["answer1", "answer2", "answer3", "answer4"],
-    answer: "",
+    title: "Who is the best ever Doctor Who Companion",
+    choices: ["Rose Tyler", "Rory Williams", "Dr. River Song", "Queen Nerfertti of Egypt "],
+    answer: "Rory Williams",
   },
 ];
 var first_page = document.getElementById("first_page");
@@ -66,11 +66,11 @@ function render_question(question) {
       if (currentAnswer === chosenAnswer) {
         console.log("correct");
         score += 25;
-        rightOrWrong.textContent = "Right!";
+        rightOrWrong.textContent = "Fantastic!";
         setTimeout(getNextQuestion, 1000);
       } else {
         console.log("wrong");
-        rightOrWrong.textContent = "Wrong!";
+        rightOrWrong.textContent = "Well...I'm sorry.";
         TIMER_60 -= 5;
         setTimeout(getNextQuestion, 1000);
       }
